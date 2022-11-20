@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="form-group col-4" style="margin-bottom: 20px;">
+    <label for="exampleInputEmail2">Filtro
+    </label>
+    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+      [(ngModel)]='cnpjFilter'>
+  </div>
+
+  <div class="card col-10" id="pdf" *ngFor="let customer of customerListFiltered | paginate: config">
+    <div class="row g-0">
+      <div class="col-3">
+        <div class="card-body">
+          <h6 class="card-title">Nome</h6>
+          <p class="card-text">{{ customer.nome }}</p>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card-body">
+          <h6 class="card-title">Idade</h6>
+          <p class="card-text">{{ customer.idade }} anos</p>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card-body">
+          <h6 class="card-title">Telefone</h6>
+          <p class="card-text">{{customer.telefone}}</p>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card-body">
+          <h6 class="card-title">Última consulta</h6>
+          <p class="card-text">{{customer.ultimaConsulta}}</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card-body">
+          <button class="btn btn-primary">Mais Detalhes</button>
+          <button class="btn btn-warning">Editar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-10 pagination">
+    <pagination-controls id="advanced" [maxSize]="maxSize" [directionLinks]="directionLinks" [autoHide]="autoHide"
+      [responsive]="responsive" [previousLabel]="labels.previousLabel" [nextLabel]="labels.nextLabel"
+      [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+      [screenReaderPageLabel]="labels.screenReaderPageLabel"
+      [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel" (pageChange)="onPageChange($event)"
+      (pageBoundsCorrection)="onPageBoundsCorrection($event)"></pagination-controls>
+  </div>
+</div>

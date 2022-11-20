@@ -1,0 +1,40 @@
+.cards .col {
+  font-size: large;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  cursor: pointer;
+  border: 1px solid #0d6efd;
+  border-radius: 10px;
+  height:140px; margin-right: 10px; 
+}
+
+
+.cardTeste {
+  font-size: large;
+  cursor: pointer;
+  border: 1px solid #0d6efd;
+  border-radius: 10px;
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.card .row {
+  margin-bottom:30px ;
+}
+
+.teste {
+  height:140px;
+  margin-right: 10px;
+}
+
+
+.teste2 {
+  height:270px;
+  background-color: #fff;
+
+}
+
+.col-6 .row {
+  border-bottom: 1px solid #ffc107;
+}

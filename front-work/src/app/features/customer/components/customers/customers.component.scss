@@ -1,0 +1,31 @@
+@import url('../../../../app.component.scss');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.grid-container  div {
+  padding-left: 0px;
+}
+
+.grid-container td {
+  vertical-align: middle;
+}
+
+.grid-image {
+  height:50px;width:50px;margin-top:10px;
+}
+
+// .container {
+//   background-color: #f8f9fa;
+// }
+
+.card {
+  margin-top: 10px;
+}
+
+.pagination {
+  justify-content: right;
+  margin-top:10px
+}
+
+.card-body button{
+  margin-right: 5px;
+}

@@ -1,0 +1,33 @@
+.styleButton {
+  background-color: #fff;
+  border-color: #136fc5;
+  color: #136fc5;
+  font-weight: bold;
+}
+
+.styleButton:hover {
+  background-color: #136fc5;
+  border-color: #136fc5;
+  color: #fff;
+  font-weight: bold;
+}
+
+.styleButtonOrange {
+  background-color: #ff8800;
+  border-color: #ff8800;
+  color: #fff;
+  font-weight: bold;
+}
+
+.styleButtonOrange:hover {
+  background-color: #fff;
+  border-color: #ff8800;
+  color: #ff8800;
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 40px;
+  align-content: center;
+}
+

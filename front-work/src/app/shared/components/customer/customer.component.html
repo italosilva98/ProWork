@@ -1,0 +1,81 @@
+<div class="wrapper">
+  <form [formGroup]="customerData">
+    <div class="row">
+      <div class="col-3">
+        <mat-form-field appearance="standard">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome" [readonly]="readOnlyForm" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Idade</mat-label>
+          <input matInput formControlName="idade" [readonly]="readOnlyForm" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Sexo</mat-label>
+          <input matInput formControlName="sexo" [readonly]="readOnlyForm" />
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field appearance="standard">
+          <mat-label>Pratica exercícios físicos?</mat-label>
+          <input
+            matInput
+            formControlName="exercicio"
+            [readonly]="readOnlyForm"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Realizou alguma cirurgia?</mat-label>
+          <input
+            matInput
+            formControlName="cirurgia"
+            [readonly]="readOnlyForm"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Uso constante de medicamentos?</mat-label>
+          <input
+            matInput
+            formControlName="medicamentos"
+            [readonly]="readOnlyForm"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="standard">
+          <mat-label>Diagnosticado com câncer?</mat-label>
+          <input matInput formControlName="cancer" [readonly]="readOnlyForm" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Diagnosticado com coronavirus?</mat-label>
+          <input matInput formControlName="corona" [readonly]="readOnlyForm" />
+        </mat-form-field>
+      </div>
+
+      <div class="col">
+        <a
+          href="#"
+          (click)="editar()"
+          style="float: right"
+          *ngIf="readOnlyForm === true"
+          >editar dados pessoais</a
+        >
+
+        <div *ngIf="readOnlyForm === false" class="wrapper-button">
+          <div class="row">
+            <button
+              type="button"
+              class="btn btn-secondary button"
+              (click)="cancelar()"
+            >
+              cancelar alteracoes
+            </button>
+            <button type="button" class="btn btn-primary button">
+              salvar alterações
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
